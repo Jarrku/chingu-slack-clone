@@ -1,0 +1,21 @@
+{
+  "name": "chingu-slack-clone",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"bsb -clean-world -make-world -w\" \"next\"",
+    "build": "bsb -clean-world -make-world && next build",
+    "start": "next start"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "next": "^5.1.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "reason-react": "^0.3.4"
+  },
+  "devDependencies": {
+    "babel-plugin-bucklescript": "^0.2.4",
+    "bs-platform": "^2.2.3",
+    "concurrently": "^3.5.1"
+  }
+}
