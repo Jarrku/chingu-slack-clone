@@ -68,7 +68,7 @@ jobs:
 
       - run: 
           name: Set new deployment alias
-          command: npx now --token ${NOW_TOKEN} --team 'chingu-slack' alias 'chingu-slack-clone-dev'
+          command: npx now alias 'chingu-slack-clone' --token ${NOW_TOKEN} --team 'chingu-slack-dev'
 
       - run:
           name: Cleanup older instance
