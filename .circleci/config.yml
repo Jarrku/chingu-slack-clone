@@ -43,15 +43,15 @@ jobs:
 
       - run: 
           name: Deploy to Now
-          command: npx now --token ${NOW_TOKEN} --team 'chingu-slack' --public
+          command: npx now --token ${NOW_TOKEN} --team ${NOW_TEAM} --public
 
       - run: 
           name: Set new deployment alias
-          command: npx now alias 'chingu-slack-clone' --token ${NOW_TOKEN} --team 'chingu-slack'
+          command: npx now alias ${NOW_ALIAS} --token ${NOW_TOKEN} --team ${NOW_TEAM}
 
       - run:
           name: Cleanup older instance
-          command: npx now-purge --token ${NOW_TOKEN} --team 'chingu-slack'
+          command: npx now-purge --token ${NOW_TOKEN} --team ${NOW_TEAM}
 
   deploy-dev:    
     docker:
@@ -64,15 +64,15 @@ jobs:
 
       - run: 
           name: Deploy to Now
-          command: npx now --token ${NOW_TOKEN} --team 'chingu-slack' --public
+          command: npx now --token ${NOW_TOKEN} --team ${NOW_TEAM} --public
 
       - run: 
           name: Set new deployment alias
-          command: npx now alias 'chingu-slack-clone-dev' --token ${NOW_TOKEN} --team 'chingu-slack'
+          command: npx now alias ${NOW_ALIAS}-dev --token ${NOW_TOKEN} --team ${NOW_TEAM}
 
       - run:
           name: Cleanup older instance
-          command: npx now-purge --token ${NOW_TOKEN} --team 'chingu-slack'
+          command: npx now-purge --token ${NOW_TOKEN} --team ${NOW_TEAM}
 
 workflows:
   version: 2
