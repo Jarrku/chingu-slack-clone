@@ -7,3 +7,4 @@ pages/**/*.js
 components/**/*.js
 .next
 .bsb.lock
+.vscode
