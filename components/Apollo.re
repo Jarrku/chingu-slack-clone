@@ -14,7 +14,7 @@ let inMemoryCache =
   createInMemoryCache(~dataIdFromObject=(obj: dataObject) => obj##id, ());
 
 /* Create an HTTP Link */
-let httpLink = createHttpLink(~uri="http://localhost:3010/graphql", ());
+let httpLink = createHttpLink(~uri="http://localhost:3000/graphql", ());
 
 module Client =
   ReasonApollo.CreateClient(
