@@ -1,4 +1,4 @@
-const { makeExecutableSchema } = require("graphql-tools");
+import { makeExecutableSchema } from "graphql-tools";
 
 // Types
 const typeDefs = `
@@ -10,12 +10,12 @@ const typeDefs = `
 // Resolvers
 const resolvers = {
   Query: {
-    ping: async () => "pong"
-  }
+    ping: () => "pong",
+  },
 };
 
 // Export schema
-module.exports = makeExecutableSchema({
+export default makeExecutableSchema({
   resolvers,
-  typeDefs
+  typeDefs,
 });

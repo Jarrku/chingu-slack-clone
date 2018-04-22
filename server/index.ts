@@ -1,8 +1,10 @@
-const { graphiqlExpress, graphqlExpress } = require("apollo-server-express");
-const bodyParser = require("body-parser");
-const express = require("express");
-const next = require("next");
-const schema = require("./schema");
+import { graphiqlExpress, graphqlExpress } from "apollo-server-express";
+import * as bodyParser from "body-parser";
+import * as express from "express";
+import * as next from "next";
+import "isomorphic-unfetch";
+
+import schema from "./schema";
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== "production";
@@ -16,18 +18,20 @@ app.prepare().then(() => {
     "/graphql",
     bodyParser.json(),
     graphqlExpress({
-      schema
-    })
+      schema,
+    }),
   );
 
   server.use(
     "/graphiql",
     graphiqlExpress({
-      endpointURL: "/graphql"
-    })
+      endpointURL: "/graphql",
+    }),
   );
 
-  server.get("*", (req, res) => handle(req, res));
+  server.get("*", (req, res) => {
+    return handle(req, res);
+  });
 
   server.listen(port, err => {
     if (err) throw err;

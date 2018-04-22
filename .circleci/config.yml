@@ -68,7 +68,7 @@ jobs:
 
       - run: 
           name: Set new deployment alias
-          command: npx now alias ${NOW_ALIAS}-dev --token ${NOW_TOKEN} --team ${NOW_TEAM}
+          command: npx now alias ${NOW_ALIAS} --token ${NOW_TOKEN} --team ${NOW_TEAM}
 
       - run:
           name: Cleanup older instance
@@ -76,7 +76,7 @@ jobs:
 
 workflows:
   version: 2
-  build-deploy:
+  build-test-deploy:
       jobs: 
         - build
         - deploy-dev:
