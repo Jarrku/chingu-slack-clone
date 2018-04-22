@@ -17,7 +17,8 @@
   },
   "suffix": ".js",
   "namespace": true,
-  "bs-dependencies": ["reason-react"],
+  "bs-dependencies": ["reason-react", "reason-apollo"],
+  "ppx-flags": ["graphql_ppx/ppx"],
   "bsc-flags": ["-bs-super-errors"],
   "refmt": 3,
   "warnings": {
