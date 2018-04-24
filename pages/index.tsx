@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import withData from "./lib/withData";
-import { PingQuery, query } from "../graphql/pingQuery";
+import { PingQuery, query } from "../components/graphql/pingQuery";
 
 const Title = styled.h1`
   color: red;
