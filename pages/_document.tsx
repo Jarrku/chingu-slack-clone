@@ -1,7 +1,6 @@
 // tslint:disable-next-line
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import "semantic-ui-css/semantic.min.css";
 
 export default class MyDocument extends Document {
   public static getInitialProps({ renderPage }) {
@@ -18,6 +17,10 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>My Page</title>
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
+          />
           {this.props.styleTags}
         </Head>
         <body>
