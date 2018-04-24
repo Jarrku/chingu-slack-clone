@@ -10,9 +10,7 @@ interface Data {
   ];
 }
 
-export class AllUsers extends Query<Data> {}
-
-export const query = gql`
+export const ALL_USERS = gql`
   {
     allUsers {
       id
@@ -20,3 +18,5 @@ export const query = gql`
     }
   }
 `;
+
+export class AllUsers extends Query<Data> {}

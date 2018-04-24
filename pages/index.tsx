@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import withData from "./lib/withData";
-import { PingQuery, query } from "../components/graphql/pingQuery";
+import { PingQuery, PING } from "../components/graphql/ping";
 
 const Title = styled.h1`
   color: red;
@@ -22,7 +22,7 @@ class Index extends React.Component<Props> {
     const { title } = this.props;
 
     return (
-      <PingQuery query={query}>
+      <PingQuery query={PING}>
         {({ data, loading, error }) => (
           <React.Fragment>
             <Title>{title}</Title>
