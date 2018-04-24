@@ -5,10 +5,10 @@ interface Data {
   ping: string;
 }
 
-export class PingQuery extends Query<Data> {}
-
-export const query = gql`
+export const PING = gql`
   {
     ping
   }
 `;
+
+export class PingQuery extends Query<Data> {}
