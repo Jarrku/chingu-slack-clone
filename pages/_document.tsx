@@ -14,9 +14,14 @@ export default class MyDocument extends Document {
 
   public render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>My Page</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="Description"
+            content="Slack Clone built with NextJS, TypeScript and GraphQL"
+          />
           <link
             rel="stylesheet"
             href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
