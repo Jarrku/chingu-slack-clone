@@ -1,6 +1,7 @@
 // tslint:disable-next-line
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import "semantic-ui-css/semantic.min.css";
 
 export default class MyDocument extends Document {
   public static getInitialProps({ renderPage }) {
