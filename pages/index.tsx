@@ -25,7 +25,7 @@ class Index extends React.Component<Props> {
       <PingQuery query={PING}>
         {({ data, loading, error }) => (
           <React.Fragment>
-            <Title>{title}</Title>
+            <Title>{title} - TestDeploy</Title>
             <p>{data.ping}</p>
           </React.Fragment>
         )}
