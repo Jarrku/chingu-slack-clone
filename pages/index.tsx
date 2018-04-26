@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import withData from "./lib/withData";
+import withData from "../lib/withData";
 import { PingQuery, PING } from "../components/graphql/ping";
 
 const Title = styled.h1`

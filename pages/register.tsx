@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Input, Container, Header } from "semantic-ui-react";
-import withData from "./lib/withData";
+import withData from "../lib/withData";
 
 import { AddUserMutation, ADD_USER } from "../components/graphql/addUser";
 
